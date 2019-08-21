@@ -4,7 +4,12 @@
 document.addEventListener('DOMContentLoaded', function(){
     
     var theTimeNow = document.getElementById('the-time-now');
-var now = new Date();
-    theTimeNow.innerHTML = now;
+    
+    setInterval(updateTime, 1000);
+    function updateTime() {
+        var now = new Date();
+        theTimeNow.innerHTML = now;
+    }
+
 });
 })();
