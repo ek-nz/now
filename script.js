@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', function(){
     //Update the time in the browser (runs every second)
     function updateTime() {
         var now = new Date(),
-            time = now.getHours() + ':' + now.getMinutes(),
+            minutes = now.getMinutes(),
             date = now.getDate() + '/' + (now.getMonth()+1);
+        if (minutes < 10) minutes = '0' + minutes;
+        var time = now.getHours() + ':' + minutes;
         theDateNow.innerHTML = date;
         theTimeNow.innerHTML = time;
         document.title = time;
