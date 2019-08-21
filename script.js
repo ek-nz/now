@@ -17,10 +17,18 @@ document.addEventListener('DOMContentLoaded', function(){
             minutes = now.getMinutes(),
             month = now.toLocaleString('default', { month: 'long' }),
             date = now.getDate() + ' ' + month;
+        
+        //Add leading zero to minutes below 10
         if (minutes < 10) minutes = '0' + minutes;
+
+        //Concatinate the time
         var time = now.getHours() + ':' + minutes;
+
+        //Show date and time on the page
         theDateNow.innerHTML = date;
         theTimeNow.innerHTML = time;
+
+        //Show time only in the tab label
         document.title = time;
     }
 
