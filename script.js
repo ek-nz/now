@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function updateTime() {
         var now = new Date();
         theTimeNow.innerHTML = now;
+        document.title = now.getHours() + ':' + now.getMinutes();
     }
 
 });
