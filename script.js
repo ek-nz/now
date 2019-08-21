@@ -34,3 +34,5 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 })();
+
+//https://pro.openweathermap.org/data/2.5/climate/month?id=7910038&appid=[log in to get key] Dunedin City current weather API call
