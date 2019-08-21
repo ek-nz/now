@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function(){
     function updateTime() {
         var now = new Date(),
             minutes = now.getMinutes(),
-            date = now.getDate() + '/' + (now.getMonth()+1);
+            month = now.toLocaleString('default', { month: 'long' }),
+            date = now.getDate() + ' ' + month;
         if (minutes < 10) minutes = '0' + minutes;
         var time = now.getHours() + ':' + minutes;
         theDateNow.innerHTML = date;
