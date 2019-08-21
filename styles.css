@@ -11,9 +11,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: xx-large;
 }
 
 .container > div {
-    padding: 1em;
+    padding: 0.5em;
+    font-size: 12em;
 }
