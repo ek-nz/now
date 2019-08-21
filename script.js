@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     
     // Store the element to display the time into
+    var theDateNow = document.getElementById('the-date-now');
     var theTimeNow = document.getElementById('the-time-now');
     
     //Make the updateTime function run every 1 second
@@ -12,9 +13,12 @@ document.addEventListener('DOMContentLoaded', function(){
     
     //Update the time in the browser (runs every second)
     function updateTime() {
-        var now = new Date();
-        theTimeNow.innerHTML = now;
-        document.title = now.getHours() + ':' + now.getMinutes();
+        var now = new Date(),
+            time = now.getHours() + ':' + now.getMinutes(),
+            date = now.getDate() + '/' + (now.getMonth()+1);
+        theDateNow.innerHTML = date;
+        theTimeNow.innerHTML = time;
+        document.title = time;
     }
 
 });
